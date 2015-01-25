@@ -12,7 +12,7 @@ server.on('listening', function () {
 server.on('message', function (message, remote) {
     var messagestr=message.toString();
     console.log(messagestr);
-    if(messagestr.indexOf('INVITE sip:'+process.env.SIP_LOGIN+'@'+process.env.IP+':5060 SIP/2.0') > -1)
+    if(messagestr.indexOf('INVITE sip:'+process.env.SIP_LOGIN+'@'+process.env.IP+':'+PORT+' SIP/2.0') > -1)
     {
         var trovato=0;
         var arr = process.env.WHITELISTED_NUMBERS.split(",");
