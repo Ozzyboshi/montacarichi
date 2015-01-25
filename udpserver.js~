@@ -1,4 +1,4 @@
-var PORT = process.env.SIP_PORT;
+var PORT = 5060;
 var HOST = '0.0.0.0';
 
 var dgram = require('dgram');
