@@ -64,3 +64,4 @@ num1:
 With this fig file, Docker will run a virtual container that listens to port 5060, any incoming packet received from the host on port 5060 will be natted to your virtual container.
 Inside the virtual container, the udpserver will check if the caller is on the WHITELISTED_NUMBERS field, if yes curl will generate a httprequest for 'http://192.168.1.1:9000/writePinOn/24'.
 Always remember to expose the container port in the docker file according to the port section of the yml file.
+I strongly suggest to put the proper iptables/filtering rule in front of the container and allow only incoming connections from voip.eutelia.it.
