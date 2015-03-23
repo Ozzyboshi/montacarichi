@@ -20,7 +20,6 @@ server.on('message', function (message, remote) {
             if (messagestr.indexOf('From: <sip:'+val+'@')>-1)
                 trovato=1;
         });
-        /*if ((messagestr.indexOf('From: <sip:3381625435@')>-1)||(messagestr.indexOf('From: <sip:3336344407@')>-1))*/
         if (trovato==1)
         {
             console.log(remote.address + ':' + remote.port +' - ' + message);
